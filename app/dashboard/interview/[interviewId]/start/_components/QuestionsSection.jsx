@@ -2,8 +2,8 @@ import { Lightbulb, Volume2 } from 'lucide-react'
 import React from 'react'
 
 function QuestionsSection({mockInterviewQuestion,activeQuestionIndex}) {
- 
-    
+
+
     const textToSpeach=(text)=>{
         if('speechSynthesis' in window){
             const speech=new SpeechSynthesisUtterance(text);
@@ -24,9 +24,9 @@ function QuestionsSection({mockInterviewQuestion,activeQuestionIndex}) {
         </div>
         <h2 className='my-5 text-md md:text-lg'>{mockInterviewQuestion[activeQuestionIndex]?.question}</h2>
         <Volume2 className='cursor-pointer' onClick={()=>textToSpeach(mockInterviewQuestion[activeQuestionIndex]?.question)} />
-        
+
         <div className='border rounded-lg p-5 bg-blue-100 mt-20 '>
-            <h2 className='flex gap-2 items-center text-primary'> 
+            <h2 className='flex gap-2 items-center text-primary'>
                 <Lightbulb/>
                 <strong>Note:</strong>
             </h2>
