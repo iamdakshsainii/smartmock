@@ -1,4 +1,4 @@
-"use client"
+"use client" // for client side
 import React, { useState } from 'react'
 import {
     Dialog,
