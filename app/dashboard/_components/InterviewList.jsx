@@ -31,7 +31,11 @@ function InterviewList() {
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-3'>
             {interviewList?.length>0?interviewList.map((interview,index)=>(
+<<<<<<< HEAD
                 <InterviewItemCard
+=======
+                <InterviewItemCard 
+>>>>>>> 01d016a8d0b4d144e0d05a5adbdc9446c90651b6
                 interview={interview}
                 key={index} />
             ))
@@ -46,4 +50,8 @@ function InterviewList() {
   )
 }
 
+<<<<<<< HEAD
 export default InterviewList
+=======
+export default InterviewList
+>>>>>>> 01d016a8d0b4d144e0d05a5adbdc9446c90651b6
