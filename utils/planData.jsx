@@ -9,7 +9,7 @@ export default [
             { value: '❌ Practice Questions' },
             { value: '❌ Email Support' },
             { value: '❌ Custom Interview Types' },
-            { value: '❌ Access to Exclusive Content' },
+            { value: '❌ Access to Exclusive Content directly' },
         ]
     },
     {
