@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "compilerOptions": {
       "baseUrl": ".",
       "paths": {
@@ -6,3 +7,11 @@
       }
     }
   }
+=======
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./*"]
+    }
+  }
+}
+>>>>>>> e0dc322c62330917ba1f03f5464ccd9992454974

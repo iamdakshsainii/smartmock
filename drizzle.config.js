@@ -1,4 +1,5 @@
 /** @type { import("drizzle-kit").Config } */
+<<<<<<< HEAD
 
 // dont export directly use const or assign object first
 const config = {
@@ -10,3 +11,12 @@ const config = {
   };
 
   export default config;
+=======
+export default {
+    schema: "./utils/schema.js",
+    dialect: 'postgresql',
+    dbCredentials: {
+      url: 'postgresql://accounts:mv4Mx0OdHZQA@ep-weathered-heart-a58wmzem.us-east-2.aws.neon.tech/ai-interview-mocker?sslmode=require',
+    }
+  };
+>>>>>>> e0dc322c62330917ba1f03f5464ccd9992454974
