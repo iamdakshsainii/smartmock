@@ -1,11 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
+  darkMode: 'class', // v3 syntax
   content: [
     './pages/**/*.{js,jsx}',
     './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
+    './src/**/*.{js,jsx}', // include './app/**/*.{js,jsx}' only if your project has it
   ],
   prefix: "",
   theme: {

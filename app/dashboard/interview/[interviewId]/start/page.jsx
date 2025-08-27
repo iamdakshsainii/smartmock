@@ -2,13 +2,15 @@
 import { db } from '@/utils/db';
 import { MockInterview } from '@/utils/schema';
 import { eq } from 'drizzle-orm';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, use } from 'react'
 import QuestionsSection from './_components/QuestionsSection';
 import RecordAnswerSection from './_components/RecordAnswerSection';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 function StartInterview({params}) {
+    // FIXED: Proper params handling for Next.js
+    const resolvedParams = use(params);
 
     const [interviewData,setInterviewData]=useState();
     const [mockInterviewQuestion,setMockInterviewQuestion]=useState();
@@ -22,7 +24,7 @@ function StartInterview({params}) {
      */
     const GetInterviewDetails=async()=>{
         const result=await db.select().from(MockInterview)
-        .where(eq(MockInterview.mockId,params.interviewId))
+        .where(eq(MockInterview.mockId,resolvedParams.interviewId))
 
         const jsonMockResp=JSON.parse(result[0].jsonMockResp);
         console.log(jsonMockResp)
@@ -54,9 +56,7 @@ function StartInterview({params}) {
           <Link href={'/dashboard/interview/'+interviewData?.mockId+"/feedback"}>
           <Button >End Interview</Button>
           </Link>}
-
-
-        </div>
+          </div>
     </div>
   )
 }
